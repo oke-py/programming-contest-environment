@@ -1,0 +1,10 @@
+{
+  "name": "ruby-programming-contest-environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "extensions": [
+    "EditorConfig.EditorConfig",
+    "rebornix.Ruby"
+  ]
+}
