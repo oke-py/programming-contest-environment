@@ -1,16 +1,22 @@
-FROM ruby:2.7.1-slim-buster as ruby
 FROM mcr.microsoft.com/devcontainers/python:0-3-bullseye
 
-COPY --from=ruby /usr/local/bin/ruby /usr/local/bin/
-COPY --from=ruby /usr/local/bin/gem /usr/local/bin/
-COPY --from=ruby /usr/local/lib/libruby.so.2.7 /usr/local/lib/
-COPY --from=ruby /usr/local/lib/ruby /usr/local/lib/ruby
-
 # git
+# https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/git-from-src.md
 COPY vscode-dev-containers/script-library/git-from-src-debian.sh /tmp/library-scripts/
 RUN apt-get update && bash /tmp/library-scripts/git-from-src-debian.sh
 
+# ruby
+# https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/ruby.md
+ENV GEM_PATH="/usr/local/rvm/gems/default:/usr/local/rvm/gems/default@global" \
+    GEM_HOME="/usr/local/rvm/gems/default" \
+    MY_RUBY_HOME="/usr/local/rvm/rubies/default" \
+    PATH="/usr/local/rvm/rubies/default/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/rvm/bin:${PATH}"
+COPY vscode-dev-containers/script-library/ruby-debian.sh /tmp/library-scripts/
+RUN apt-get update && bash /tmp/library-scripts/ruby-debian.sh 2.7.1
+RUN gem install rubocop solargraph
+
 # node
+# https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/node.md
 ENV NVM_DIR="/usr/local/share/nvm"
 ENV NVM_SYMLINK_CURRENT=true \
     PATH=${NVM_DIR}/current/bin:${PATH}

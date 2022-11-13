@@ -5,6 +5,7 @@
   },
   "extensions": [
     "EditorConfig.EditorConfig",
-    "rebornix.Ruby"
+    "rebornix.Ruby",
+    "castwide.solargraph"
   ]
 }
