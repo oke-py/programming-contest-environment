@@ -6,6 +6,7 @@
   "extensions": [
     "EditorConfig.EditorConfig",
     "rebornix.Ruby",
-    "castwide.solargraph"
+    "castwide.solargraph",
+    "kaiwood.endwise"
   ]
 }
