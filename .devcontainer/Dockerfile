@@ -24,6 +24,7 @@ COPY vscode-dev-containers/script-library/node-debian.sh /tmp/library-scripts/
 RUN apt-get update && bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}"
 
 # programming contest
+RUN export PS1="\w $ "
 RUN echo "alias ojt='oj t -c \"ruby main.rb\"'" >> /home/vscode/.bashrc
 RUN pip3 install online-judge-tools
 RUN npm install -g atcoder-cli

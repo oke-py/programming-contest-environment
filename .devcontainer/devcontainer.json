@@ -8,5 +8,7 @@
     "rebornix.Ruby",
     "castwide.solargraph",
     "kaiwood.endwise"
-  ]
+  ],
+	"workspaceFolder": "/home/vscode/coding",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/coding,type=bind"
 }
