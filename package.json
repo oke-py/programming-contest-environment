@@ -1,0 +1,25 @@
+{
+  "name": "coding",
+  "version": "0.0.1",
+  "description": "```shell git clone --recursive https://github.com/oke-py/ruby-programming-contest-environment.git ```",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint contests/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oke-py/ruby-programming-contest-environment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oke-py/ruby-programming-contest-environment/issues"
+  },
+  "homepage": "https://github.com/oke-py/ruby-programming-contest-environment#readme",
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
