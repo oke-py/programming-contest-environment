@@ -1,7 +1,7 @@
-# ruby-programming-contest-environment
+# programming-contest-environment
 
 ```shell
-git clone --recursive https://github.com/oke-py/ruby-programming-contest-environment.git
+git clone --recursive https://github.com/oke-py/programming-contest-environment.git
 ```
 
 ## After opening in devcontainer
