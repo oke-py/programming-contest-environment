@@ -1,5 +1,5 @@
 {
-  "name": "ruby-programming-contest-environment",
+  "name": "programming-contest-environment",
   "build": {
     "dockerfile": "Dockerfile"
   },
