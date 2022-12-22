@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint contests/**/*.js",
+    "lint-fix": "eslint --fix contests/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
