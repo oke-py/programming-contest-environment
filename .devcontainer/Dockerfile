@@ -23,6 +23,14 @@ ENV NVM_SYMLINK_CURRENT=true \
 COPY vscode-dev-containers/script-library/node-debian.sh /tmp/library-scripts/
 RUN apt-get update && bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}"
 
+# rust
+# https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/rust.md
+ENV CARGO_HOME=/usr/local/cargo \
+    RUSTUP_HOME=/usr/local/rustup
+ENV PATH=${CARGO_HOME}/bin:${PATH}
+COPY vscode-dev-containers/script-library/rust-debian.sh /tmp/library-scripts/
+RUN apt-get update && bash /tmp/library-scripts/rust-debian.sh "${CARGO_HOME}" "${RUSTUP_HOME}" vscode true false 1.42
+
 # programming contest
 RUN export PS1="\w $ "
 RUN echo "alias ojt='oj t -c \"ruby main.rb\"'" >> /home/vscode/.bashrc
