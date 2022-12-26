@@ -1,7 +1,10 @@
 {
   "name": "programming-contest-environment",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "args": {
+      "DOCKER_BUILDKIT": "1"
+    }
   },
   "extensions": [
     "EditorConfig.EditorConfig",
