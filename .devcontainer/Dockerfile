@@ -41,6 +41,7 @@ RUN npm install -g atcoder-cli
 RUN <<EOF
   echo "alias ojt-js='oj t -c \"node main.js\"'" >> /home/vscode/.bashrc
   echo "alias ojt-rb='oj t -c \"ruby main.rb\"'" >> /home/vscode/.bashrc
+  echo "alias ojt-rs='oj t -c \"cargo run\"'" >> /home/vscode/.bashrc
 EOF
 
 COPY --chown=vscode:vscode atcoder-cli-nodejs /home/vscode/.config/atcoder-cli-nodejs
