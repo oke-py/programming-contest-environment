@@ -1,0 +1,9 @@
+{
+  "task": {
+    "program": [
+      "src/main.rs",
+      "Cargo.toml"
+    ],
+    "submit": "src/main.rs"
+  }
+}
