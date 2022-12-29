@@ -1,7 +1,9 @@
+use proconio::input;
+
 fn main() {
-    proconio::input! {
+    input! {
         n: i32,
-    }
+    };
 
     println!("{}", n);
 }
