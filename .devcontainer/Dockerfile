@@ -39,7 +39,7 @@ RUN pip3 install online-judge-tools
 RUN npm install -g atcoder-cli
 
 RUN <<EOF
-  echo "alias init-js='cp ~/.config/atcoder-cli-nodejs/ruby/main.js .'"  >> /home/vscode/.bashrc
+  echo "alias init-js='cp ~/.config/atcoder-cli-nodejs/nodejs/main.js .'"  >> /home/vscode/.bashrc
   echo "alias init-py='touch main.py'"  >> /home/vscode/.bashrc
   echo "alias init-rb='cp ~/.config/atcoder-cli-nodejs/ruby/main.rb .'"  >> /home/vscode/.bashrc
 
