@@ -39,10 +39,19 @@ RUN pip3 install online-judge-tools
 RUN npm install -g atcoder-cli
 
 RUN <<EOF
+  echo "alias init-js='cp ~/.config/atcoder-cli-nodejs/ruby/main.js .'"  >> /home/vscode/.bashrc
+  echo "alias init-py='touch main.py'"  >> /home/vscode/.bashrc
+  echo "alias init-rb='cp ~/.config/atcoder-cli-nodejs/ruby/main.rb .'"  >> /home/vscode/.bashrc
+
   echo "alias ojt-js='oj t -c \"node main.js\"'" >> /home/vscode/.bashrc
   echo "alias ojt-py='oj t -c \"python3 main.py\"'" >> /home/vscode/.bashrc
   echo "alias ojt-rb='oj t -c \"ruby main.rb\"'" >> /home/vscode/.bashrc
   echo "alias ojt-rs='oj t -c \"cargo run\"'" >> /home/vscode/.bashrc
+
+  echo "alias sub-js='acc s main.js'" >> /home/vscode/.bashrc
+  echo "alias sub-py='acc s main.py'" >> /home/vscode/.bashrc
+  echo "alias sub-rb='acc s main.rb'" >> /home/vscode/.bashrc
+  echo "alias sub-rs='acc s src/main.rs'" >> /home/vscode/.bashrc
 EOF
 
 COPY --chown=vscode:vscode atcoder-cli-nodejs /home/vscode/.config/atcoder-cli-nodejs
