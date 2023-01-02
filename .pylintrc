@@ -8,6 +8,8 @@ analyse-fallback-blocks=no
 # Ignore warnings
 disable=
     C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116, # missing-function-docstring
 
 # Load and enable all available extensions. Use --list-extensions to see a list
 # all available extensions.
