@@ -33,6 +33,9 @@ ENV PATH=${CARGO_HOME}/bin:${PATH}
 COPY vscode-dev-containers/script-library/rust-debian.sh /tmp/library-scripts/
 RUN apt-get update && bash /tmp/library-scripts/rust-debian.sh "${CARGO_HOME}" "${RUSTUP_HOME}" vscode true false 1.42
 
+# python
+COPY --chown=vscode:vscode pep8 /home/vscode/.config/pep8
+
 # programming contest
 RUN export PS1="\w $ "
 RUN pip3 install online-judge-tools
