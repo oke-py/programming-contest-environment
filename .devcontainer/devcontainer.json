@@ -6,12 +6,17 @@
       "DOCKER_BUILDKIT": "1"
     }
   },
-  "extensions": [
-    "EditorConfig.EditorConfig",
-    "rebornix.Ruby",
-    "castwide.solargraph",
-    "kaiwood.endwise"
-  ],
-	"workspaceFolder": "/home/vscode/coding",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "rebornix.Ruby",
+        "castwide.solargraph",
+        "kaiwood.endwise",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "workspaceFolder": "/home/vscode/coding",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/coding,type=bind"
 }
